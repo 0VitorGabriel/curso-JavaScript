@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+    <style>
+        body {
+            background-color: rgb(71, 71, 180);
+            color: white;
+        }
+        input {
+            border-color: rgb(0, 0, 0);
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Analisando países</h1>
+    Digite o país em que mora: <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="verificador()">
+    <div id="local">
+
+    </div>
+    <script>
+        function verificador() {
+            var tpais = document.getElementById('pais')
+            var local = document.getElementById('local')
+            var pais = String(tpais.value)
+
+            local.innerHTML = `<p>Vocẽ está morando no ${pais}</p>`
+
+            if (pais == 'Brasil') {
+                local.innerHTML += `<p>Vocẽ é Brasileiro!</p>`
+            } else {
+                local.innerHTML += `<p>Vocẽ é estrangeiro</p>`
+            }
+        }
+    </script>
+</body>
+</html>
