@@ -17,10 +17,6 @@ section {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
 }
 
-div > input {
-    margin: 7px;
-}
-
 footer {
     color: #ffffff;
     text-align: center;
