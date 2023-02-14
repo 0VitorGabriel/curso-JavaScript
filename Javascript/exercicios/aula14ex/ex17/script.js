@@ -4,7 +4,7 @@ function contar() {
     var txtpasso = document.getElementById('txtpasso')
     var res = document.getElementById('contagem')
 
-    if (txtinicio.value.length == 0) {
+    /*if (txtinicio.value.length == 0) {
         res.innerHTML = 'Impossivel contar...'
     } else if (txtpasso.value == 0) {
         alert('Passo inválido!, considerando PASSO 1')
@@ -20,5 +20,5 @@ function contar() {
         for (var contador = inicio; contador >= fim; contador -= passo) {
             res.innerHTML += contador 
         }
-    }
+    }*/
 }
