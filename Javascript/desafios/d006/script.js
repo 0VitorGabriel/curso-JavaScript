@@ -1,5 +1,4 @@
 function conversor() {
-    var temperatura = document.getElementById('temperatura')
     var resultado = document.getElementById('resultado')
     var graus_padrao = Number(prompt('Digite uma temperatura em C (Celsius)'))
 
