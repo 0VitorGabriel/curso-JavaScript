@@ -58,12 +58,16 @@ function finalizar() {
 
         media = soma / total
 
-        resposta.innerHTML = ''
-        resposta.innerHTML += `<p>Ao todo temos, ${total} números finalizados</p>`
-        resposta.innerHTML += `<p>Maior número digitado: ${maior}</p>`
-        resposta.innerHTML += `<p>Menor número digitado: ${menor}</p>`
-        resposta.innerHTML += `<p>Soma de todos os valores digitados: ${soma}</p>`
-        resposta.innerHTML += `<p>A média dos valores digitados é: ${media.toFixed(2)}</p>`
-        item.value = ''
+        mostrador(maior, menor, soma, media, total)
     }
+}
+
+function mostrador(mai, men, som, med, tot) {
+    resposta.innerHTML = ''
+    resposta.innerHTML += `<p>Ao todo temos, ${tot} números finalizados</p>`
+    resposta.innerHTML += `<p>Maior número digitado: ${mai}</p>`
+    resposta.innerHTML += `<p>Menor número digitado: ${men}</p>`
+    resposta.innerHTML += `<p>Soma de todos os valores digitados: ${som}</p>`
+    resposta.innerHTML += `<p>A média dos valores digitados é: ${med.toFixed(2)}</p>`
+    item.value = ''
 }
