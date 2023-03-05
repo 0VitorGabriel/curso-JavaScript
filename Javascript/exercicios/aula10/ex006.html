@@ -23,23 +23,18 @@
     </div>
     <script>
         var box = document.querySelector('div#area')
-        box.addEventListener ('click', clicar)
-        box.addEventListener ('enter', entrar)
-        box.addEventListener ('mouseout', sair)
 
-        function clicar() {
-            box.innerText = 'Clicou!'
+        box.addEventListener ('click', clicar = () => {
+            box.innerText= 'Clicou!'
             box.style.background = 'red'
-        }
-
-        function entrar() {
+        })
+        box.addEventListener ('enter', entrar = () => {
             box.innerText = 'Entrou!'
-        }
-
-        function sair () {
-            box.innerText = 'Saiu'
+        })
+        box.addEventListener ('mouseout', sair = () => {
+            box.innerText = 'saiu!'
             box.style.background = 'green'
-        }
+        })
     </script>
 </body>
 </html>
