@@ -1,5 +1,7 @@
 const cursos = ['HTML', 'CSS', 'JavaScript', 'BootStrap', 'PHP', 'React']
 
-cursos.map((Element,i) => {
-    console.log (`${cursos}`)
-} )
+let c = cursos.map((el, i) => {
+    return '<div>' + el + '</div>'
+})
+
+console.log(c)
