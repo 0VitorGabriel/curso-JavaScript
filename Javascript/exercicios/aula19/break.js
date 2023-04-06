@@ -1,14 +1,12 @@
 let n = 0
-let max = 10
-let pares = 0
+let max = 1000
 
-for (let i = n; i < max; i++) {
-    console.log('CFB cursos - ' + i)
-    if (i % 2 !== 0) {
-        continue
+while (n < max) {
+    console.log('CFB cursos - ' + n)
+    if (n == 10) {
+        break
     }
-    pares++
+    n++
 }
 
-console.log('quantidade de pares: ' + pares)
 console.log('fim do programa')
