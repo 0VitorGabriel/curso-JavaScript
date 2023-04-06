@@ -34,22 +34,22 @@ function adicionar() {
     txt_numero.value = ''
     txt_numero.focus()
 }
-11
+
 function finalizar() {
     let total_numero = lista.length
     let maior = lista[0]
     let menor = lista[0]
     let soma = 0
 
-    for (let pos in lista) {
-        soma += lista[pos]
+    lista.map((element) => {
+        soma += element
 
-        if (lista[pos] > maior) {
-            maior = lista[pos]
-        } if (lista[pos] < menor) {
-            menor = lista[pos]
+        if (element > maior) {
+            maior = element
+        } if (element < menor) {
+            menor = element
         }
-    }
+    })
     
     let media = soma / total_numero
 
