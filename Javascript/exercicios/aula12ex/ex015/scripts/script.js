@@ -1,22 +1,32 @@
-function carregar() {
-    var msg = document.getElementById('msg')
-    var img = document.getElementById('imagem')
-    var data = new Date()
-    var hora = data.getHours()
+let hours = new Date().getHours()
+let image_area = document.querySelector('img#image')
+let hours_area = document.querySelector('div#msg')
+let body = document.querySelector('body')
 
-    msg.innerText = `Agora são ${hora} horas`
+function show_hours() {
+    hours_area.innerHTML = `Agora são, aproximadamente ${hours} horas`
+}
 
-    if (hora >= 0 && hora < 12) {
-        img.src = 'imgs/manha.png'
-        document.body.style.background = '#e2cd9f'
+function date_verify() {
 
-    } else if (hora >= 12 && hora < 18) {
-        img.src = 'imgs/tarde.png'
-        document.body.style.background = '#b9846f'
+    show_hours()
 
-    } else {
-        img.src = 'imgs/noite.png'
-        document.body.style.background = '#515154'
-        
+    if (hours >= 0 && hours < 12) {
+
+        image_area.src = './imgs/manha.png'
+
+        body.classList.add('caso_manha')
+
+    } if (hours >= 12 && hours < 18) {
+
+        image_area.src = './imgs/tarde.png'
+
+        body.classList.add('caso_tarde')
+
+    } if (hours >= 18 && hours <= 23) {
+
+        image_area.src = './imgs/noite.png'
+
+        body.classList.add('caso_noite')
     }
 }

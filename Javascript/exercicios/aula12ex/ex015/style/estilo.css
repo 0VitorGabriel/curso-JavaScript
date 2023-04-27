@@ -27,3 +27,15 @@ footer {
     text-align: center;
     font-style: italic;
 }
+
+.caso_manha {
+    background-color: #e2cd9f;
+}
+
+.caso_tarde {
+    background-color: #b9846f;
+}
+
+.caso_noite {
+    background-color: #515154;
+}
