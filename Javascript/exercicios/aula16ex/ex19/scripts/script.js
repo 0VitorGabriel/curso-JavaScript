@@ -45,16 +45,17 @@ function finalizar() {
         let soma = 0
         let media = 0
 
-        for (let pos in numeros) {
+        numeros.map((num) => {
+            soma += num
 
-            soma += numeros[pos]
-
-            if (numeros[pos] > maior) {
-                maior = numeros[pos]
-            } if (numeros[pos] < menor) {
-                menor = numeros[pos]
+            if (num > maior) {
+                maior = num
             }
-        }
+
+            if (num < menor) {
+                menor = num
+            }
+        })
 
         media = soma / total
 
