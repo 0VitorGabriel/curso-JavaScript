@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try catch</title>
+</head>
+<body>
+
+    <input type="text" name="input" id="input" value="valor do input">
+
+    <script>
+
+        const getInput = (id) => {
+            const dom = document.querySelector(`#${id}`)
+
+            if (!dom) {
+                throw Error('campo não encontrado')
+            }
+
+            return dom.value
+        }
+
+        try {
+            const val = getInput('inpaut')
+            alert(val)
+        } catch (e) {
+            alert('erro: ' + e.message)
+        }
+        
+        alert('fim do programa')
+
+        /*try {
+            trecho de código com potencial para falhar
+        } catch (error) {
+            trecho de código que será executado caso falha
+        }*/
+    </script>
+</body>
+</html>
