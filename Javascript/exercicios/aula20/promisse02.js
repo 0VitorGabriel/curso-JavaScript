@@ -1,15 +1,26 @@
-let numero_digitado = prompt('digite um número para verificar se ele é par ou ímpar')
+const betterDeveloper = 'Gabriel'
 
-const verifica_numero = new Promise((resolve, reject) => {
-    if (Number(numero_digitado) % 2 == 0) {
-        resolve ('número par')
+const qualMelhorDesenvolvedor = new Promise((resolve, reject) => {
+    if (betterDeveloper !== 'Vanessa' && betterDeveloper !== 'Gabriel') {
+        reject(
+            {
+                name: 'isto está errado',
+                message: betterDeveloper + '?, realmente'
+            }
+        )
     } else {
-        reject ('número ímpar')
+        resolve(
+            {
+                name: betterDeveloper,
+                message: 'CDFs são os melhores'
+            }
+        )
     }
-})
+})  
 
-verifica_numero.then((message) => {
-    alert(message)
-}).catch((err) => {
-    alert(err)
-})
+qualMelhorDesenvolvedor
+    .then((message) => {
+        console.log(message.name + '? Yeah ' + message.message)
+    }).catch((error) => {
+        console.log(error.name + ' ' + error.message)
+    })
