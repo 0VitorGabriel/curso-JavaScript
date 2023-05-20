@@ -1,18 +1,18 @@
-function melhor_banda_rock(banda) {
-    return new Promise ( (resolve, reject) => {
-        if (banda == 'Queen') {
+function melhor_banda(banda) {
+    return new Promise ((resolve, reject) => {
+        if (banda === 'Queen') {
             resolve (
                 {
                     sucesso: true,
                     nome_banda: banda,
-                    mensagem: banda + ' é a sua banda preferida!'
+                    msg: banda + ' é a melhor banda de rock '
                 }
             )
         } else {
             reject (
                 {
                     sucesso: false,
-                    mensagem: 'banda ruim'
+                    msg: banda + ', é uma péssima banda'
                 }
             )
         }
@@ -29,18 +29,16 @@ function melhor_musica(resposta) {
     })
 }
 
-async function faca_trabalho() {
-    try{
-        const respostaDaFuncao_banda = await melhor_banda_rock('Kiss')
-    
-        console.log(respostaDaFuncao_banda)
-    
-        const respostaDaFuncao_musica = await melhor_musica(respostaDaFuncao_banda)
-    
-        console.log(respostaDaFuncao_musica)
-    } catch (erro) {
-        console.log(erro.mensagem)
-    }
-}
+(async function () {
+    try {
+        const response_banda = await melhor_banda('Queen')
 
-faca_trabalho()
+        console.log(response_banda)
+
+        const response_som = await melhor_musica(response_banda)
+
+        console.log(response_som)
+    } catch (error) {
+        console.log(error)
+    }
+})()
